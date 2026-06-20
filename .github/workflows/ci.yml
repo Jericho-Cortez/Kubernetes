@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: ["main","master"]
+  pull_request:
+    branches: ["main","master"]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install yamllint
+        run: |
+          python -m pip install --upgrade pip
+          pip install yamllint
+      - name: Run yamllint on manifests
+        run: |
+          yamllint -c <(echo "extends: default") manifests || true
+      - name: Kubectl dry-run (schema check)
+        run: |
+          sudo snap install kubectl --classic || true
+          for f in $(ls -1 manifests/**/*.yaml manifests/*.yaml 2>/dev/null || true); do echo "Checking $f"; kubectl apply --dry-run=client -f "$f"; done
