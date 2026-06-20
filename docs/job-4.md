@@ -177,7 +177,7 @@ sudo k3s kubectl get deploy -n job2
 
 Le `-o wide` te permet de voir sur quels nœuds les pods tournent.[^2][^5]
 
-![[Pasted image 20260609121257.png]]
+![screenshot](../screenshots/job-4/Pasted image 20260609121257.png)
 
 ## Étape 4 — Test de HA
 
@@ -195,7 +195,7 @@ Puis retourne sur le master :
 sudo k3s kubectl get pods -n job2 -o wide
 ```
 
-![[Pasted image 20260609121644.png]]
+![screenshot](../screenshots/job-4/Pasted image 20260609121644.png)
 
 Si les réplicas sont bien configurés, Kubernetes doit rescheduler les pods encore disponibles sur les autres nœuds actifs.
 
@@ -206,3 +206,4 @@ Tu dois constater :
 - plusieurs pods pour nginx et apache,
 - au moins un pod encore en ligne après l’arrêt d’un worker,
 - une redistribution automatique des pods sur les autres nœuds.
+

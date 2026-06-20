@@ -44,11 +44,11 @@ spec:
 ```bash
 sudo k3s kubectl get secret -n job2
 ```
-![[Pasted image 20260611163027.png]]
+![screenshot](../screenshots/job-7/Pasted image 20260611163027.png)
 ```bash
 sudo k3s kubectl describe secret mariadb-secret -n job2
 ```
-![[Pasted image 20260611163104.png]]
+![screenshot](../screenshots/job-7/Pasted image 20260611163104.png)
 
 ```bash
 sudo k3s kubectl get deploy mariadb -n job2 -o yaml
@@ -57,9 +57,9 @@ sudo k3s kubectl get deploy mariadb -n job2 -o yaml
 ```bash
 sudo k3s kubectl describe pod -n job2 -l app=mariadb
 ```
-![[Pasted image 20260611163735.png]]
+![screenshot](../screenshots/job-7/Pasted image 20260611163735.png)
 Elle prouve que le mot de passe n’est plus stocké en clair dans le manifest, mais injecté depuis le Secret.
 ```bash
 sudo k3s kubectl exec -it deploy/mariadb -n job2 -- printenv | grep MARIADB_ROOT_PASSWORD
 ```
-![[Pasted image 20260611163308.png]]
+![screenshot](../screenshots/job-7/Pasted image 20260611163308.png)

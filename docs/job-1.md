@@ -42,7 +42,7 @@ Sur chaque machine, lancer l’installation de base :
 ```bash
 curl -sfL https://get.k3s.io | sh -
 ```
-![[Pasted image 20260609095051.png]]
+![screenshot](../screenshots/job-1/Pasted image 20260609095051.png)
 ## 4. Vérifier que K3s fonctionne
 
 Contrôler l’état du service :
@@ -56,4 +56,4 @@ Puis vérifier les nœuds Kubernetes :
 ```bash
 sudo k3s kubectl get nodes
 ```
-![[Pasted image 20260609102352.png]]
+![screenshot](../screenshots/job-1/Pasted image 20260609102352.png)

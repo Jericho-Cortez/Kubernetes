@@ -153,31 +153,31 @@ sudo k3s kubectl get pods -n job2
 sudo k3s kubectl get svc -n job2
 sudo k3s kubectl get all -n job2
 ```
-![[Pasted image 20260609111154.png]]
+![screenshot](../screenshots/job-2/Pasted image 20260609111154.png)
 ## Vérification des pods
 
 ### Nginx
 ```bash
 sudo k3s kubectl describe pod nginx-798dd5959d-wx8hd -n job2
 ```
-![[Pasted image 20260609110607.png]]
+![screenshot](../screenshots/job-2/Pasted image 20260609110607.png)
 ### Apache
 ```bash
 sudo k3s kubectl describe pod apache-65c4769648-z58kk -n job2
 ```
-![[Pasted image 20260609110158.png]]
+![screenshot](../screenshots/job-2/Pasted image 20260609110158.png)
 ### MariaDB
 ```bash
 sudo k3s kubectl describe pod mariadb-75f8c9cc9f-d8xrf -n job2
 ```
-![[Capture d'écran 2026-06-09 110447.png]]
+![screenshot](../screenshots/job-2/Capture d'écran 2026-06-09 110447.png)
 
 ## Verification Curl
 ### ngnix :
-![[Pasted image 20260609111313.png]]
+![screenshot](../screenshots/job-2/Pasted image 20260609111313.png)
 
 ### apache :
-![[Pasted image 20260609111455.png]]
+![screenshot](../screenshots/job-2/Pasted image 20260609111455.png)
 
 ## Résultat attendu
 

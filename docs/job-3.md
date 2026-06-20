@@ -32,7 +32,7 @@ Les trois machines doivent apparaître dans la liste :
 - kubes-01.local
 - kubes-02.local
 - kubes-03.local
-![[Pasted image 20260609114338.png]]
+![screenshot](../screenshots/job-3/Pasted image 20260609114338.png)
 ## 4. changement de nom
 
 Depuis le Master :
@@ -40,7 +40,7 @@ Depuis le Master :
 sudo k3s kubectl label node kubes-02.local node-role.kubernetes.io/worker=worker
 sudo k3s kubectl label node kubes-03.local node-role.kubernetes.io/worker=worker
 ```
-![[Pasted image 20260609115026.png]]
+![screenshot](../screenshots/job-3/Pasted image 20260609115026.png)
 ## 5. Vérifier les applications du job 2
 
 Toujours depuis le master, vérifier que les applications déployées précédemment sont toujours disponibles :
@@ -50,7 +50,7 @@ sudo k3s kubectl get pods -n job2
 sudo k3s kubectl get svc -n job2
 sudo k3s kubectl get all -n job2
 ```
-![[Pasted image 20260609114647.png]]
+![screenshot](../screenshots/job-3/Pasted image 20260609114647.png)
 ## Captures d’écran à ajouter
 - Récupération du token sur le master.
 - Commande d’ajout des workers.

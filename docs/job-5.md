@@ -218,7 +218,7 @@ sudo k3s kubectl apply -f mariadb-pvc.yaml
 sudo k3s kubectl apply -f mariadb.yaml
 ```
 
-![[Pasted image 20260609175646.png]]
+![screenshot](../screenshots/job-5/Pasted image 20260609175646.png)
 ## 6. Vérifier le déploiement
 
 ```bash
@@ -230,7 +230,7 @@ sudo k3s kubectl get configmap -n job2
 sudo k3s kubectl get secret -n job2
 ```
 
-![[Pasted image 20260609175734.png]]
+![screenshot](../screenshots/job-5/Pasted image 20260609175734.png)
 ## 7. Vérifier la persistance
 
 Supprimer un pod puis le recréer :
@@ -240,7 +240,7 @@ sudo k3s kubectl delete pod -n job2 <nom_du_pod>
 sudo k3s kubectl get pods -n job2 -o wide
 ```
 
-![[Pasted image 20260609174209.png]]
+![screenshot](../screenshots/job-5/Pasted image 20260609174209.png)
 
 Les données doivent rester disponibles grâce au volume persistant.
 

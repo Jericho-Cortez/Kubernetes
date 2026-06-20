@@ -70,7 +70,7 @@ sudo k3s kubectl get rolebinding -n rbac-test
 sudo k3s kubectl get sa -n rbac-test
 ```
 
-![[Pasted image 20260611165203.png]]
+![screenshot](../screenshots/job-8/Pasted image 20260611165203.png)
 
 ## Test des droits
-![[Pasted image 20260611165229.png]]
+![screenshot](../screenshots/job-8/Pasted image 20260611165229.png)
