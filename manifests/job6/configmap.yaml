@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: job2
+data:
+  index.html: |
+    <html>
+    <body>
+    <h1>Bonjour depuis nginx avec ConfigMap</h1>
+    </body>
+    </html>

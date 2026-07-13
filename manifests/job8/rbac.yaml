@@ -1,0 +1,3 @@
+# Ce fichier est un alias — le manifest RBAC se trouve dans manifests/rbac/rbac.yaml
+# Il est conservé ici pour cohérence de la structure par job.
+# Voir manifests/rbac/rbac.yaml pour le contenu complet.
